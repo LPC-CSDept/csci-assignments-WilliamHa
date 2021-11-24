@@ -12,4 +12,5 @@
 
 main: 
       li $v0, 10
-      syscall        #Wingardium Leviosa
+      syscall        # Never Gonna Give You Up
+                     # Never Gonna Let You Down
