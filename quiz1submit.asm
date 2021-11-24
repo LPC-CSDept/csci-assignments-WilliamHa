@@ -5,11 +5,11 @@
 // 11/23/2021
 // CSCI-21
 // 
+//
 
    .text
    .globl main
 
 main: 
       li $v0, 10
-      syscall
-      
+      syscall        #Wingardium Leviosa
