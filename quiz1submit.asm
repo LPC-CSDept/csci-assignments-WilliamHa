@@ -1,11 +1,13 @@
-//
-// quiz1submit.asm
-//
-// William Ha
-// 11/23/2021
-// CSCI-21
-// 
-//
+#
+# quiz1submit.asm
+#
+# William Ha
+# 11/23/2021
+# CSCI-21
+# 
+# Convert the user's Fahrenheit temperature (in integers) to 
+# Celsius(floating point)
+#
 
       .data
 sub:  .float 32.0
