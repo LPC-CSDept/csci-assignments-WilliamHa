@@ -23,10 +23,12 @@ main: 	jal	getInt			   #subroutine gets user input of Fahrenheit in integers
          sll	$zero, $zero, 0
          sub.s	$f0, $f0, $f1		#$f0 = userinput - 32.0
          l.s 	$f1, val2		   #$f1 = 5.0
+         sll	$zero, $zero, 0
          mul.s	$f0, $f0, $f1		#$f0 = (input - 32.0) * 5.0
          sll	$zero, $zero, 0
          sll	$zero, $zero, 0
          l.s 	$f1, val3		   #$f2 = 9.0
+         sll	$zero, $zero, 0
          div.s	$f0, $f0, $f1		
          sll	$zero, $zero, 0
          sll	$zero, $zero, 0
