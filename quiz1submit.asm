@@ -12,6 +12,7 @@ val1:  	.float 32.0
 val2:  	.float 5.0
 val3:	   .float 9.0
 pr:   	.asciiz "Enter the Temperature in Fahrenheit: "
+nl:      .asciiz "\n"
          .text
          .globl main
 
@@ -29,11 +30,14 @@ main: 	jal	getInt			   #subroutine gets user input of Fahrenheit in integers
          sll	$zero, $zero, 0
          l.s 	$f1, val3		   #$f1 = 9.0
          sll	$zero, $zero, 0
-         div.s	$f0, $f0, $f1		
+         div.s	$f0, $f0, $f1		#$f0 = ((input - 32.0) * 5.0 / 9.0) = C
          sll	$zero, $zero, 0
          sll	$zero, $zero, 0
          li    $v0, 2
          mov.s $f12, $f0
+         syscall
+         li    $v0, 4
+         la    $a0, nl
          syscall
          li	$v0, 10			      #syscall service code to end program
          syscall      
