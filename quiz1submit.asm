@@ -27,11 +27,14 @@ main: 	jal	getInt			   #subroutine gets user input of Fahrenheit in integers
          mul.s	$f0, $f0, $f1		#$f0 = (input - 32.0) * 5.0
          sll	$zero, $zero, 0
          sll	$zero, $zero, 0
-         l.s 	$f1, val3		   #$f2 = 9.0
+         l.s 	$f1, val3		   #$f1 = 9.0
          sll	$zero, $zero, 0
          div.s	$f0, $f0, $f1		
          sll	$zero, $zero, 0
          sll	$zero, $zero, 0
+         li    $v0, 2
+         mov.s $f12, $f0
+         syscall
          li	$v0, 10			      #syscall service code to end program
          syscall      
 
