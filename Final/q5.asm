@@ -21,6 +21,6 @@ inRe:    lui   $t0, 0xffff
 
 outWr:   lw    $t1, 8($t0)
          andi  $t1, $t1, 0x0001
-         beq   $t1, $zero, outWr
+         beq   $t1, $zero, outWr    
          sw    $v0,  12($t0)
 

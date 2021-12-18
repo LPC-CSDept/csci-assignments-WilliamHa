@@ -1,0 +1,6 @@
+We should be using two input registers(Receiver Control and Data) and two output registers(Transmitter Control and Data)
+for Memory Mapped I/O.
+I used the ready bit(the lowest-order bit) of the Receiver Control and the Transmitter Control Registers to see if the
+input/output is ready. The Data registers are read so that the ready bit in the Control registers are set to 0.
+I was supposed to get a value of 1 from the Control registers. The Data registers are supposed to set the ready
+bits back to 0.
